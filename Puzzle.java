@@ -1,47 +1,45 @@
 public class Puzzle {
     private int price;
     private static double volume;
-    private int Number;
+    private int number;
     private String type = "wooden";
-    private String material ="plywood board";
+    private String material = "plywood board";
 
-    public static double totalvolume = 0;
+    public static double totalVolume = 0;
 
 
     public Puzzle() {
     }
 
-    public Puzzle(int Number_of_parts, double volume, int price) {
-        setPrice(price);
-        setVolum(volume);
-        setNumber(Number_of_parts);
+    public Puzzle(int number, double volume, int price) {
+        this(number, volume, price, null, null);
     }
 
-    public Puzzle(int price, double volume , int Number, String type , String material) {
+    public Puzzle(int price, double volume, int number, String type, String material) {
         setPrice(price);
         setVolum(volume);
-        setNumber(Number);
+        setNumber(number);
         setType(type);
         setMaterial(material);
     }
 
 
     public String toString() {
-        return "Puzzle is cost " + price + " UAH, has " + Number+ "  Details, is " + volume+" square meter,has " +type+ "  is plywood board material " + material+ ".";
+        return "Puzzle is cost " + price + " UAH, has " + number + "  Details, is " + volume + " square meter,has " + type + "  is plywood board material " + material + ".";
     }
 
     static void printStaticSum() {
-        System.out.println("Puzzle can have " +volume+" square meter");
+        System.out.println("Puzzle can have " + volume + " square meter");
     }
 
     public void printSum() {
-        System.out.println("The puzzle can have " +volume+" square meter, total meter " + totalvolume + ".");
+        System.out.println("The puzzle can have " + volume + " square meter, total meter " + totalVolume + ".");
     }
 
-    public void resetValues(int price, double volume, int Number, String type ,String material) {
+    public void resetValues(int price, double volume, int number, String type, String material) {
         setPrice(price);
-        setVolum( volume);
-        setNumber(Number);
+        setVolum(volume);
+        setNumber(number);
         setType(type);
         setMaterial(material);
     }
@@ -54,23 +52,24 @@ public class Puzzle {
         this.price = price;
     }
 
-    public double getVolum(){
+    public double getVolum() {
         return volume;
     }
 
-    public void setVolum(double volum){
-        this.volume= volum ;
+    public void setVolum(double volum) {
+        this.volume = volum;
 
     }
-    public int getNumber(){
-        return Number;
+
+    public int getNumber() {
+        return number;
     }
 
-    public void setNumber (int Number){
-        this.Number= Number;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public double getVolume(){
+    public double getVolume() {
         return volume;
     }
 
@@ -78,15 +77,15 @@ public class Puzzle {
         return type;
     }
 
-    public void setType (String type){
-        this.type= type;
-}
+    public void setType(String type) {
+        this.type = type;
+    }
 
-    public String getMaterial(){
+    public String getMaterial() {
         return material;
     }
 
-    public void setMaterial( String material){
+    public void setMaterial(String material) {
         this.material = material;
-}
+    }
 }
